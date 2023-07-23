@@ -1,5 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
 // import { counteActions } from "../store";
+import { Container, Row, Col } from "react-bootstrap";
+import MainBox from "./mainBox";
+import Sidebar from "./sidebar";
+
 const MainPage = () => {
   // const dispatch = useDispatch();
   const counter = useSelector((state) => state.counter);
@@ -9,9 +13,21 @@ const MainPage = () => {
   // console.log(counter);
   return (
     <>
-      <h1>Main page</h1>
       {/* <p>{counter && counter}</p> */}
       <p>{appData && appData.username}</p>
+
+      <Container>
+        <Row>
+          <Col md={3}>
+            <Sidebar />
+          </Col>
+          <Col md={9}>
+            <h1>
+              <MainBox />
+            </h1>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };
