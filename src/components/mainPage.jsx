@@ -9,7 +9,7 @@ const MainPage = () => {
   const counter = useSelector((state) => state.counter);
   // const toggle = useSelector((state) => state.toggle);
   const appData = useSelector((state) => state.appData);
-  debugger;
+  // debugger;
   // console.log(counter);
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -6,7 +6,7 @@ import "leaflet/dist/leaflet.css";
 // Import the custom marker image
 import customMarkerIcon from "../icon/marker.png";
 
-const MapComponent = () => {
+const MapComponent = ({ latitude = null, longitude = null }) => {
   const initialMarkers = [
     { id: 1, latitude: 35.702, longitude: 51.336 },
     // Add more initial markers here if needed
@@ -14,6 +14,14 @@ const MapComponent = () => {
 
   // State to hold the markers' positions
   const [markers, setMarkers] = useState(initialMarkers);
+
+  useEffect(() => {
+    console.log("longitude", longitude);
+    console.log("latitude", latitude);
+    if (longitude && latitude) {
+      addNewMarker(latitude, longitude);
+    }
+  }, [longitude, latitude]);
 
   // Create a custom icon using the customMarkerIcon
   const customIcon = new L.Icon({
