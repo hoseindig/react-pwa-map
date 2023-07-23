@@ -52,7 +52,7 @@ const MapComponent = () => {
         ref={mapRef} // Set the ref to access the MapContainer instance
         center={[35.702, 51.336]} // Set the initial center of the map
         zoom={16}
-        style={{ width: "100%", height: "400px" }}
+        style={{ width: "100%", minHeight: "400px", height: "100%" }}
         onClick={(e) => addNewMarker(e.latlng.lat, e.latlng.lng)} // Add a new marker by clicking the map
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
