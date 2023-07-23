@@ -18,10 +18,10 @@ const MainPage = () => {
 
       <Container>
         <Row>
-          <Col md={3}>
+          <Col md={3} className="d-none d-md-block">
             <Sidebar />
           </Col>
-          <Col md={9}>
+          <Col md={9} xs={12}>
             <h1>
               <MainBox />
             </h1>

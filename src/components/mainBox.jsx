@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import MapComponent from "./mapBox";
 import React, { useState } from "react";
+import style from "../style/mainBox.module.scss";
 const MainBox = () => {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
@@ -38,8 +39,15 @@ const MainBox = () => {
         </Col>
       </Row>
       <Row>
+        <Col className={style.mapBoxParent}>
+          <div className={style.mapBox}></div>
+          <div>
+            <MapComponent latitude={latitude} longitude={longitude} />
+          </div>
+        </Col>
+      </Row>
+      <Row>
         <Col>
-          <MapComponent latitude={latitude} longitude={longitude} />
           <button onClick={() => getLocation()}>getLocation</button>
         </Col>
       </Row>

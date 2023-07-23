@@ -76,7 +76,7 @@ const MapComponent = ({ latitude = null, longitude = null }) => {
           </Marker>
         ))}
       </MapContainer>
-      <button onClick={handleAddMarkerButtonClick}>Add New Marker</button>
+      {/* <button onClick={handleAddMarkerButtonClick}>Add New Marker</button> */}
     </>
   );
 };
