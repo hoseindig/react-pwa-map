@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import MapComponent from "./mapBox";
 
 const MainBox = () => {
   return (
@@ -9,6 +10,11 @@ const MainBox = () => {
         </Col>
         <Col></Col>
         <Col></Col>
+      </Row>
+      <Row>
+        <Col>
+          <MapComponent />
+        </Col>
       </Row>
     </Container>
   );
