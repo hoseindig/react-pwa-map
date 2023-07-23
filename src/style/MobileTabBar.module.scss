@@ -1,0 +1,14 @@
+.mainBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  color: gray;
+  .active {
+    color: black;
+    font-weight: bold;
+  }
+}

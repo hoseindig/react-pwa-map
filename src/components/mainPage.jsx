@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Container, Row, Col } from "react-bootstrap";
 import MainBox from "./mainBox";
 import Sidebar from "./sidebar";
+import MobileTabBar from "./mobileTabMenu";
 
 const MainPage = () => {
   // const dispatch = useDispatch();
@@ -25,6 +26,11 @@ const MainPage = () => {
             <h1>
               <MainBox />
             </h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={3} className="d-md-none">
+            <MobileTabBar />
           </Col>
         </Row>
       </Container>
